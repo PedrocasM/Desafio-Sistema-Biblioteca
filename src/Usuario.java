@@ -1,7 +1,41 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Usuario {
-    String nome;
-    Integer idade;
-    ArrayList<Livros> livros;
+    private String nome;
+    private Integer idade;
+    private ArrayList<Livros> livros;
+    Scanner entradaTexto = new Scanner(System.in);
+    Scanner entradaNumero = new Scanner(System.in);
+
+    public Usuario(String nome, Integer idade, ArrayList<Livros> livros) {
+        this.nome = nome;
+        this.idade = idade;
+        this.livros = livros;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+    public void setNome(String nome){
+        this.nome =  nome;
+    }
+    public Integer getIdade(){
+        return idade;
+    }
+    public void setIdade(Integer idade){
+        this.idade = idade;
+    }
+    public ArrayList<Livros> livros(){
+        return livros;
+    }
+    public void setLivros(String nome){
+        this.livros = livros;
+    }
+    public void AlugarLivros(Livros livros) {
+        if (livros.getDisponibilidade() == true);
+
+
+
+    }
 }

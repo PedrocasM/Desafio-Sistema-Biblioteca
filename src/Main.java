@@ -1,13 +1,34 @@
 import javax.swing.*;
-
-public void main() {
+ void main() {
     /*Quais são os objetos envolvidos?
-Quais classes deverão existir?
-Quais são os atributos de cada classe?
-Quais são os métodos de cada classe?
 Como os objetos Usuário e Livro se relacionam?
-Onde deverá ficar a responsabilidade de alugar um livro?
 Como o sistema saberá se um livro está disponível?
-*/
+    */
+        Scanner entradatexto = new Scanner(System.in);
+        Integer resposta;
+
+    do {
+        System.out.println("Bem vindo a Biblioteca Games\n");
+        System.out.println("[1] Para cadastrar cliente");
+        System.out.println("[2] Para cadastrar livro");
+        System.out.println("[3] Listar usuarios");
+        System.out.println("[4] Listar livros");
+        System.out.println("[0] Para sair");
+        resposta = entradatexto.nextInt();
+        switch (resposta) {
+            case 1:
+                System.out.println("Digite seu nome:");
+                String nome = entradatexto.nextLine();
+                System.out.println();
+
+                Usuario usuario = new Usuario(null, null, null);
+        }
+
+
+    } while (resposta != 0);
 
 }
+
+
+
+
