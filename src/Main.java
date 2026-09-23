@@ -1,11 +1,13 @@
-import javax.swing.*;
- void main() {
-    /*Quais são os objetos envolvidos?
-Como os objetos Usuário e Livro se relacionam?
-Como o sistema saberá se um livro está disponível?
-    */
-        Scanner entradatexto = new Scanner(System.in);
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+public static void main(String[]args) {
+        ArrayList<Livro> livros = new ArrayList<>();
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        Scanner entrada = new Scanner(System.in);
         Integer resposta;
+        
 
     do {
         System.out.println("Bem vindo a Biblioteca Games\n");
@@ -14,14 +16,39 @@ Como o sistema saberá se um livro está disponível?
         System.out.println("[3] Listar usuarios");
         System.out.println("[4] Listar livros");
         System.out.println("[0] Para sair");
-        resposta = entradatexto.nextInt();
+        resposta = entrada.nextInt();
+        Integer id = 0;
+
         switch (resposta) {
             case 1:
+                entrada.nextLine();
                 System.out.println("Digite seu nome:");
-                String nome = entradatexto.nextLine();
-                System.out.println();
+                String nome = entrada.nextLine();
+                System.out.println("Digite sua idade:");
+                Integer idade = entrada.nextInt();
+                id ++;
 
-                Usuario usuario = new Usuario(null, null, null);
+                Usuario idUsuario = new Usuario(nome, idade, id, null);
+                usuarios.add(idUsuario);
+                break;
+
+                case 2:
+                    entrada.nextLine();
+                    System.out.println("Digite o titulo do livro:");
+                    String titulo = entrada.nextLine();
+                    Boolean disponibilidade = true;
+
+                    Livro livro1 = new Livro(titulo, disponibilidade);
+                    livros.add(livro1);
+                    break;
+
+                    case 3:
+                        for(Livro livro: livros){
+                            System.out.println(livro.getTitulo());
+                            break;
+                        }
+                    
+
         }
 
 
@@ -29,6 +56,4 @@ Como o sistema saberá se um livro está disponível?
 
 }
 
-
-
-
+}
