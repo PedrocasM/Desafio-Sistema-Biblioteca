@@ -19,7 +19,12 @@ public class Livro {
     public void setDisponibilidade(Boolean disponibilidade){
         this.disponibilidade = disponibilidade; 
     }
-    
-    
 
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "titulo='" + titulo + '\'' +
+                ", disponibilidade=" + disponibilidade +
+                '}';
+    }
 }
