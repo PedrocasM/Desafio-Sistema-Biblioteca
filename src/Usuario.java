@@ -1,17 +1,12 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Usuario {
     private String nome;
-    private Integer idade;
-    private ArrayList<Livro> livros;
-    Scanner entradaTexto = new Scanner(System.in);
-    Scanner entradaNumero = new Scanner(System.in);
+    private ArrayList<Livro> livrosAlugados;
 
-    public Usuario(String nome, Integer idade, ArrayList<Livro> livros) {
+    public Usuario(String nome, ArrayList<Livro> livros) {
         this.nome = nome;
-        this.idade = idade;
-        this.livros = livros;
+        this.livrosAlugados = livros;
     }
 
     public String getNome(){
@@ -20,31 +15,15 @@ public class Usuario {
     public void setNome(String nome){
         this.nome = nome;
     }
-    public Integer getIdade(){
-        return idade;
+    public ArrayList<Livro> getLivrosAlugados(){
+        return livrosAlugados;
     }
-    public void setIdade(Integer idade){
-        this.idade = idade;
-    }
-    public ArrayList<Livro> livros(){
-        return livros;
-    }
-    public void setLivros(String nome){
-        this.livros = livros;
+    public void setLivrosAlugados(String nome){
+        this.livrosAlugados = livrosAlugados;
     }
     public void AlugarLivros(Livro livros) {
         if (livros.getDisponibilidade() == true);
 
-
     }
-
-    @Override
-    public String toString() {
-        return "Usuario{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", livros=" + livros +
-                '}';
     }
-}
 
